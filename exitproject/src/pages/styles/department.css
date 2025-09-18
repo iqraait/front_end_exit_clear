@@ -1,0 +1,356 @@
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap");
+
+:root {
+  --primary: #2563eb; /* Modern blue */
+  --primary-dark: #1e40af;
+  --secondary: #f1f5f9; /* Light neutral background */
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+
+  /* 🌍 Global Alert Colors */
+  --alert-success-bg: #d4edda;
+  --alert-success-text: #155724;
+  --alert-success-border: #c3e6cb;
+  --alert-error-bg: #f8d7da;
+  --alert-error-text: #721c24;
+  --alert-error-border: #f5c6cb;
+
+  --alert-info-bg: #d1ecf1;
+  --alert-info-text: #0c5460;
+  --alert-info-border: #bee5eb;
+
+  --alert-warning-bg: #fff3cd;
+  --alert-warning-text: #856404;
+  --alert-warning-border: #ffeeba;
+}
+
+/* Container */
+.department-container {
+  font-family: "Raleway", sans-serif;
+  padding: 1.5rem 2rem;
+  background: var(--secondary);
+  min-height: 100vh;
+  color: var(--text-dark);
+  position: relative;
+}
+
+/* Department Header - Styled like HR dashboard */
+.department-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 25px 35px;
+  background: #ffffff;
+  border: 2px solid #e0e6ed;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.department-header:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+.department-header h2 {
+  font-size: 2.5em;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  position: relative;
+}
+.dashboard-header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  border-radius: 2px;
+}
+.department-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-top: 0.4rem;
+  letter-spacing: 0.5px;
+}
+
+/* Sign Out Button */
+.signout-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.3);
+}
+.signout-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(30, 64, 175, 0.3);
+}
+
+/* Summary */
+.summary-section {
+  margin: 2.5rem 0;
+}
+.summary-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+.summary-cards {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+.summary-card {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--text-dark);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.summary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Employees */
+.employee-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.employee-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  padding: 1.5rem;
+  width: 300px;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.employee-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+}
+.employee-card p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+.card-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+}
+.card-actions button {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.card-actions button:hover {
+  background: var(--primary-dark);
+}
+.view-btn {
+  background: var(--text-light);
+}
+.view-btn:hover {
+  background: var(--text-dark);
+}
+
+.department-head-id-input {
+  width: 80%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background: #f9fafb;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.department-head-id-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* Popup */
+.form-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 41, 59, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.form-popup-content {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 14px;
+  width: 550px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.3s ease;
+}
+.form-popup-content h3 {
+  margin-top: 0;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  color: var(--primary-dark);
+}
+.questions-list {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.question-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+}
+.comment-box {
+  width: 80%;
+  height: 100px;
+  margin: 1.2rem 0;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.95rem;
+  resize: none;
+}
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+.submit-btn,
+.cancel-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.submit-btn:hover,
+.cancel-btn:hover {
+  background: var(--primary-dark);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 🌍 Global Alert Styles */
+.alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1100;
+  animation: slideInFromRight 0.5s ease-out forwards;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+.alert-success {
+  background-color: var(--alert-success-bg);
+  color: var(--alert-success-text);
+  border: 1px solid var(--alert-success-border);
+}
+.alert-error {
+  background-color: var(--alert-error-bg);
+  color: var(--alert-error-text);
+  border: 1px solid var(--alert-error-border);
+}
+.alert-info {
+  background-color: var(--alert-info-bg);
+  color: var(--alert-info-text);
+  border: 1px solid var(--alert-info-border);
+}
+.alert-warning {
+  background-color: var(--alert-warning-bg);
+  color: var(--alert-warning-text);
+  border: 1px solid var(--alert-warning-border);
+}
+.alert button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+  line-height: 1;
+  padding: 0 5px;
+}
+.alert button:hover {
+  opacity: 0.7;
+}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
